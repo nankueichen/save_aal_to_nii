@@ -4,8 +4,6 @@ fid = fopen('aal/ROI_MNI_V4.txt','r');
 aal_label = textscan(fid,'%s %s %d \n',116);
 fclose(fid);
 
-aal_label_number = aal_label{3};
-
 nii = load_nii('aal/ROI_MNI_V4');
 aal_mask = nii.img;
 
